@@ -28,19 +28,20 @@ export default function GameCard({ game, onSelect }: Props) {
       className="cursor-pointer"
     >
       <Card className="overflow-hidden bg-neutral-900 border-neutral-800 hover:shadow-xl transition-all">
-        {/* Bloc de couleur en haut */}
+        {/* Bloc de couleur ou image en haut */}
         {game.image ? (
-          <div className="relative h-32 w-full overflow-hidden">
+          <div className="relative h-40 w-full overflow-hidden bg-neutral-800">
             <Image
               src={game.image}
               alt={game.name}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              priority={game.id === 'aviator'}
             />
           </div>
         ) : (
-          <div className={`h-32 w-full bg-gradient-to-br ${colorClass}`} />
+          <div className={`h-40 w-full bg-gradient-to-br ${colorClass}`} />
         )}
         
         {/* Contenu de la carte */}
