@@ -1,0 +1,109 @@
+{
+  "nav": {
+    "home": "Home",
+    "games": "Games",
+    "lottery": "Lottery"
+  },
+  "hero": {
+    "title": "Play Simple. Win Big.",
+    "subtitle": "Mobile First.",
+    "description": "The most modern online gaming platform in Congo. Instant mobile payments, fair games, fast winnings.",
+    "cta": "Play Now",
+    "stats": {
+      "online": "players online",
+      "games": "games available",
+      "winners": "winners today"
+    }
+  },
+  "games": {
+    "title": "Virtual Games",
+    "subtitle": "Discover our exciting games",
+    "play": "Launch",
+    "comingSoon": "Coming Soon",
+    "categories": {
+      "crash": "Crash",
+      "slots": "Slots",
+      "dice": "Dice",
+      "mines": "Mines",
+      "lottery": "Lottery",
+      "other": "Other"
+    },
+    "status": {
+      "alpha": "Alpha",
+      "beta": "Beta",
+      "live": "Live"
+    }
+  },
+  "lottery": {
+    "title": "Congo Lottery",
+    "subtitle": "Try your luck",
+    "buyTicket": "Buy a Ticket",
+    "selectNumbers": "Select 6 numbers",
+    "yourNumbers": "Your numbers",
+    "drawResults": "Draw Results",
+    "lastDraw": "Last Draw",
+    "nextDraw": "Next Draw",
+    "yourTickets": "Your Tickets",
+    "matches": "Winning Numbers",
+    "frequency": "Number Frequency",
+    "ticketPrice": "Ticket Price",
+    "confirmPurchase": "Confirm Purchase"
+  },
+  "payments": {
+    "title": "Mobile Payments",
+    "subtitle": "Deposit and withdraw easily",
+    "operators": {
+      "orange": "Orange Money",
+      "airtel": "Airtel Money",
+      "vodacom": "M-Pesa"
+    },
+    "amount": "Amount",
+    "phone": "Phone Number",
+    "operator": "Operator",
+    "deposit": "Deposit",
+    "withdraw": "Withdraw",
+    "status": {
+      "pending": "Pending",
+      "success": "Success",
+      "failed": "Failed"
+    },
+    "steps": {
+      "1": "Choose your operator",
+      "2": "Enter amount",
+      "3": "Confirm on your phone"
+    }
+  },
+  "actions": {
+    "play": "Play",
+    "buyTicket": "Buy Ticket",
+    "deposit": "Deposit",
+    "withdraw": "Withdraw",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close"
+  },
+  "footer": {
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "responsible": "Responsible Gaming",
+    "copyright": "© 2025 Congo Gaming. All rights reserved."
+  },
+  "features": {
+    "instant": {
+      "title": "Instant Payments",
+      "description": "Deposit and withdraw with Orange Money, Airtel Money and M-Pesa"
+    },
+    "fair": {
+      "title": "Fair Games",
+      "description": "Verifiable and transparent algorithms for all games"
+    },
+    "mobile": {
+      "title": "Mobile First",
+      "description": "Optimized for a perfect mobile experience"
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "Our team is available to help you anytime"
+    }
+  }
+}

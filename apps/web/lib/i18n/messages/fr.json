@@ -1,0 +1,109 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "games": "Jeux",
+    "lottery": "Loto"
+  },
+  "hero": {
+    "title": "Jouez simple. Gagnez grand.",
+    "subtitle": "Mobile d'abord.",
+    "description": "La plateforme de jeux en ligne la plus moderne du Congo. Paiements mobiles instantanés, jeux équitables, gains rapides.",
+    "cta": "Jouer maintenant",
+    "stats": {
+      "online": "joueurs en ligne",
+      "games": "jeux disponibles",
+      "winners": "gagnants aujourd'hui"
+    }
+  },
+  "games": {
+    "title": "Jeux Virtuels",
+    "subtitle": "Découvrez nos jeux passionnants",
+    "play": "Lancer",
+    "comingSoon": "Prochainement",
+    "categories": {
+      "crash": "Crash",
+      "slots": "Machines à sous",
+      "dice": "Dés",
+      "mines": "Mines",
+      "lottery": "Loterie",
+      "other": "Autre"
+    },
+    "status": {
+      "alpha": "Alpha",
+      "beta": "Bêta",
+      "live": "En ligne"
+    }
+  },
+  "lottery": {
+    "title": "Loto Congo",
+    "subtitle": "Tentez votre chance",
+    "buyTicket": "Acheter un ticket",
+    "selectNumbers": "Sélectionnez 6 numéros",
+    "yourNumbers": "Vos numéros",
+    "drawResults": "Résultats des tirages",
+    "lastDraw": "Dernier tirage",
+    "nextDraw": "Prochain tirage",
+    "yourTickets": "Vos tickets",
+    "matches": "Numéros gagnants",
+    "frequency": "Fréquence des numéros",
+    "ticketPrice": "Prix du ticket",
+    "confirmPurchase": "Confirmer l'achat"
+  },
+  "payments": {
+    "title": "Paiements Mobiles",
+    "subtitle": "Déposez et retirez facilement",
+    "operators": {
+      "orange": "Orange Money",
+      "airtel": "Airtel Money",
+      "vodacom": "M-Pesa"
+    },
+    "amount": "Montant",
+    "phone": "Numéro de téléphone",
+    "operator": "Opérateur",
+    "deposit": "Déposer",
+    "withdraw": "Retirer",
+    "status": {
+      "pending": "En attente",
+      "success": "Réussi",
+      "failed": "Échoué"
+    },
+    "steps": {
+      "1": "Choisissez votre opérateur",
+      "2": "Entrez le montant",
+      "3": "Confirmez sur votre téléphone"
+    }
+  },
+  "actions": {
+    "play": "Jouer",
+    "buyTicket": "Acheter un ticket",
+    "deposit": "Déposer",
+    "withdraw": "Retirer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "close": "Fermer"
+  },
+  "footer": {
+    "terms": "Conditions d'utilisation",
+    "privacy": "Politique de confidentialité",
+    "responsible": "Jeu responsable",
+    "copyright": "© 2025 Congo Gaming. Tous droits réservés."
+  },
+  "features": {
+    "instant": {
+      "title": "Paiements Instantanés",
+      "description": "Déposez et retirez avec Orange Money, Airtel Money et M-Pesa"
+    },
+    "fair": {
+      "title": "Jeux Équitables",
+      "description": "Algorithmes vérifiables et transparents pour tous les jeux"
+    },
+    "mobile": {
+      "title": "Mobile First",
+      "description": "Optimisé pour une expérience parfaite sur mobile"
+    },
+    "support": {
+      "title": "Support 24/7",
+      "description": "Notre équipe est disponible pour vous aider à tout moment"
+    }
+  }
+}
