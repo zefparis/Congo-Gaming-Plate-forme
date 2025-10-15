@@ -1,6 +1,7 @@
 'use client';
 
-import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { GameEntry } from "../data/games";
 import Image from "next/image";
@@ -10,18 +11,26 @@ type Props = {
   onSelect: (g: GameEntry) => void;
 };
 
+// Couleurs par type de jeu
+const gameColors: Record<string, string> = {
+  crash: 'from-orange-500 to-orange-600',
+  slots: 'from-purple-500 to-pink-500',
+  dice: 'from-cyan-500 to-blue-500',
+};
+
 export default function GameCard({ game, onSelect }: Props) {
+  const colorClass = gameColors[game.kind] || 'from-gray-500 to-gray-600';
+  
   return (
     <motion.div
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.98 }}
       className="cursor-pointer"
-      onClick={() => onSelect(game)}
     >
-      <Card className="overflow-hidden bg-gradient-to-br from-neutral-900 to-neutral-800 dark:from-neutral-800 dark:to-neutral-700 hover:shadow-lg transition">
-        {/* Image de fond si disponible */}
-        {game.image && (
-          <div className="relative h-48 w-full overflow-hidden">
+      <Card className="overflow-hidden bg-neutral-900 border-neutral-800 hover:shadow-xl transition-all">
+        {/* Bloc de couleur en haut */}
+        {game.image ? (
+          <div className="relative h-32 w-full overflow-hidden">
             <Image
               src={game.image}
               alt={game.name}
@@ -29,30 +38,26 @@ export default function GameCard({ game, onSelect }: Props) {
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-            {/* Overlay gradient pour le badge */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-            {/* Badge status en overlay */}
-            <div className="absolute top-3 right-3">
-              <span className="text-xs px-3 py-1 rounded-full bg-primary/90 text-white uppercase font-semibold backdrop-blur-sm">
-                {game.status}
-              </span>
-            </div>
           </div>
+        ) : (
+          <div className={`h-32 w-full bg-gradient-to-br ${colorClass}`} />
         )}
         
-        <CardHeader>
-          <CardTitle className="text-lg font-semibold text-primary">{game.name}</CardTitle>
-        </CardHeader>
-        <CardContent className="text-sm text-muted-foreground">
-          <p>{game.description}</p>
-          {!game.image && (
-            <p className="mt-2">
-              <span className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary uppercase">
-                {game.status}
-              </span>
-            </p>
-          )}
-        </CardContent>
+        {/* Contenu de la carte */}
+        <div className="p-4 space-y-3">
+          <div>
+            <h3 className="text-lg font-bold text-white">{game.name}</h3>
+            <p className="text-sm text-gray-400">{game.kind}</p>
+          </div>
+          
+          <Button 
+            onClick={() => onSelect(game)}
+            className="w-full bg-neutral-800 hover:bg-neutral-700 text-white"
+            variant="secondary"
+          >
+            Lancer
+          </Button>
+        </div>
       </Card>
     </motion.div>
   );

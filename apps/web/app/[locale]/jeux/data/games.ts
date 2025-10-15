@@ -41,6 +41,18 @@ export const GAMES: GameEntry[] = [
     },
     tags: ['coming-soon'],
   },
+  {
+    id: 'lucky-dice',
+    name: 'Lucky Dice',
+    kind: 'dice',
+    status: 'beta',
+    description: "Lancez les dés et tentez votre chance !",
+    integration: {
+      type: 'module',
+      modulePath: '@/app/jeux/components/dice',
+    },
+    tags: ['dice', 'luck'],
+  },
 ];
 
 export function getGameById(id: string): GameEntry | undefined {
