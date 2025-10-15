@@ -1,0 +1,8 @@
+[build]
+builder = "nixpacks"
+buildCommand = "pnpm --filter @congo-gaming/web build"
+
+[deploy]
+startCommand = "pnpm --filter @congo-gaming/web start"
+restartPolicyType = "on-failure"
+restartPolicyMaxRetries = 10
