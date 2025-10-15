@@ -37,7 +37,7 @@ export default function GameCard({ game, onSelect }: Props) {
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              priority={game.id === 'aviator'}
+              priority={game.id === 'aviator' || game.id === 'slots' || game.id === 'lucky-dice'}
             />
           </div>
         ) : (

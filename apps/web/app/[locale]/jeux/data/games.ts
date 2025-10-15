@@ -35,6 +35,7 @@ export const GAMES: GameEntry[] = [
     kind: 'slots',
     status: 'alpha',
     description: "Tournez et tentez votre chance dans l'espace !",
+    image: '/images/hero/835.jpg',
     integration: {
       type: 'module',
       modulePath: '@/app/jeux/components/slots',
@@ -47,6 +48,7 @@ export const GAMES: GameEntry[] = [
     kind: 'dice',
     status: 'beta',
     description: "Lancez les dés et tentez votre chance !",
+    image: '/images/hero/dice.jpg',
     integration: {
       type: 'module',
       modulePath: '@/app/jeux/components/dice',
