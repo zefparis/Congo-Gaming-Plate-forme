@@ -16,7 +16,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative overflow-hidden py-20 md:py-32">
+    <section className="relative overflow-hidden py-12 sm:py-16 md:py-24 lg:py-32">
       {/* Image de fond avec overlay sombre pour contraste */}
       <div className="absolute inset-0 z-0">
         <div 
@@ -26,25 +26,25 @@ export function Hero() {
         {/* Overlay gradient pour contraste du texte */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-background" />
       </div>
-      <div className="container relative">
+      <div className="container relative px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl text-center"
         >
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
             <span className="bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
               {t('title')}
             </span>
             <br />
             <span className="text-white drop-shadow-lg">{t('subtitle')}</span>
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-200 drop-shadow-md">
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-200 drop-shadow-md px-4">
             {t('description')}
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button asChild size="lg" className="group">
+          <div className="mt-8 sm:mt-10 flex items-center justify-center gap-x-4 sm:gap-x-6">
+            <Button asChild size="lg" className="group w-full sm:w-auto">
               <Link href="/jeux">
                 {t('cta')}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -57,7 +57,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3"
+          className="mt-12 sm:mt-16 grid grid-cols-1 gap-4 sm:gap-6 md:gap-8 sm:grid-cols-3"
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -65,11 +65,11 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
-              className="glass rounded-lg p-6 text-center backdrop-blur-md bg-black/40 border border-white/10"
+              className="glass rounded-lg p-4 sm:p-6 text-center backdrop-blur-md bg-black/40 border border-white/10"
             >
-              <stat.icon className="mx-auto h-8 w-8 text-primary" />
-              <p className="mt-4 text-3xl font-bold text-white">{stat.value}</p>
-              <p className="mt-2 text-sm text-gray-300">{stat.label}</p>
+              <stat.icon className="mx-auto h-6 w-6 sm:h-8 sm:w-8 text-primary" />
+              <p className="mt-3 sm:mt-4 text-2xl sm:text-3xl font-bold text-white">{stat.value}</p>
+              <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-300">{stat.label}</p>
             </motion.div>
           ))}
         </motion.div>

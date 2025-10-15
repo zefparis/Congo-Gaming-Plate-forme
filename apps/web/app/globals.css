@@ -56,6 +56,19 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Amélioration du scroll sur mobile */
+  html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+  
+  /* Prévention du zoom sur les inputs mobile */
+  @media screen and (max-width: 640px) {
+    input, select, textarea {
+      font-size: 16px !important;
+    }
+  }
 }
 
 @layer utilities {
@@ -65,5 +78,27 @@
   
   .glass-dark {
     @apply bg-black/10 backdrop-blur-md border border-black/20;
+  }
+  
+  /* Conteneur responsive avec padding adaptatif */
+  .container-responsive {
+    @apply container px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Texte responsive */
+  .text-responsive-sm {
+    @apply text-xs sm:text-sm;
+  }
+  
+  .text-responsive-base {
+    @apply text-sm sm:text-base;
+  }
+  
+  .text-responsive-lg {
+    @apply text-base sm:text-lg md:text-xl;
+  }
+  
+  .text-responsive-xl {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl;
   }
 }
