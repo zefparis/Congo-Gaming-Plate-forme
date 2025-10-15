@@ -4,6 +4,7 @@ export type GameEntry = {
   kind: string;
   status: 'alpha' | 'beta' | 'live';
   description: string;
+  image?: string;
   integration: {
     type: 'iframe' | 'module';
     url?: string;
@@ -20,6 +21,7 @@ export const GAMES: GameEntry[] = [
     kind: 'crash',
     status: 'live',
     description: "Un jeu de type Crash Game en temps réel. Multipliez vos gains avant le crash !",
+    image: '/images/hero/aviator.jpg',
     integration: {
       type: 'iframe',
       url: 'https://aviator-1-server.vercel.app',
