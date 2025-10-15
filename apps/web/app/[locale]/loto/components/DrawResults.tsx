@@ -72,7 +72,7 @@ export function DrawResults() {
           <CardHeader>
             <CardTitle>{t('frequency')}</CardTitle>
             <CardDescription>
-              Fréquence d'apparition des numéros sur les derniers tirages
+              Fréquence d&apos;apparition des numéros sur les derniers tirages
             </CardDescription>
           </CardHeader>
           <CardContent>

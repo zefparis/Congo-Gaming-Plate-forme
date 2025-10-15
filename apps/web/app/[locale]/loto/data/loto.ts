@@ -16,7 +16,7 @@ export interface LotoTicket {
 }
 
 // Mock data - in-memory store
-let mockDraws: LotoDraw[] = [
+const mockDraws: LotoDraw[] = [
   {
     id: 'draw-001',
     date: '2025-10-14T20:00:00Z',
@@ -37,7 +37,7 @@ let mockDraws: LotoDraw[] = [
   },
 ];
 
-let mockTickets: LotoTicket[] = [];
+const mockTickets: LotoTicket[] = [];
 
 export function getDraws(): LotoDraw[] {
   return mockDraws;

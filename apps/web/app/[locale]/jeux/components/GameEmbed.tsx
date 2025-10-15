@@ -1,9 +1,7 @@
 'use client';
 
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import dynamic from "next/dynamic";
 import { GameEntry } from "../data/games";
-import { useState } from "react";
 
 type Props = {
   game: GameEntry | null;
@@ -24,7 +22,7 @@ export default function GameEmbed({ game, onClose }: Props) {
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-muted-foreground text-lg">
-            Module <b>{game.name}</b> en cours d'intégration...
+            Module <b>{game.name}</b> en cours d&apos;intégration...
           </div>
         )}
       </DialogContent>
