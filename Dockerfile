@@ -32,13 +32,21 @@ WORKDIR /app
 # Install pnpm in production stage
 RUN npm install -g pnpm@10.18.2
 
-# Copy necessary files from builder
+# Copy workspace configuration
+COPY --from=base /app/pnpm-workspace.yaml ./pnpm-workspace.yaml
+COPY --from=base /app/pnpm-lock.yaml ./pnpm-lock.yaml
+COPY --from=base /app/.npmrc ./.npmrc
+
+# Copy package.json
+COPY --from=base /app/apps/web/package.json ./apps/web/package.json
+
+# Install production dependencies only
+RUN pnpm install --frozen-lockfile --prod
+
+# Copy built application
 COPY --from=base /app/apps/web/.next ./apps/web/.next
 COPY --from=base /app/apps/web/public ./apps/web/public
-COPY --from=base /app/apps/web/package.json ./apps/web/package.json
 COPY --from=base /app/apps/web/next.config.mjs ./apps/web/next.config.mjs
-COPY --from=base /app/node_modules ./node_modules
-COPY --from=base /app/pnpm-workspace.yaml ./pnpm-workspace.yaml
 
 # Set environment variables
 ENV NODE_ENV=production
