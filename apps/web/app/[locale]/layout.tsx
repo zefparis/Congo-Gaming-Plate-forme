@@ -7,7 +7,11 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import '../globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+});
 
 export const metadata = {
   title: 'Congo Gaming - Jouez simple. Gagnez grand.',
