@@ -1,6 +1,5 @@
-import { redirect } from 'next/navigation';
-
 export default function RootLayout() {
-  // Redirect to default locale
-  redirect('/fr');
+  // This layout is only used for the root path
+  // The middleware handles locale redirects
+  return null;
 }
