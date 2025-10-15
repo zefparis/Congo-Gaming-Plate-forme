@@ -4,5 +4,3 @@ buildCommand = "cd apps/web && pnpm install && pnpm build"
 
 [deploy]
 startCommand = "cd apps/web && pnpm start"
-restartPolicyType = "on-failure"
-restartPolicyMaxRetries = 10
