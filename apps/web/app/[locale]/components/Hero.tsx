@@ -38,9 +38,9 @@ export function Hero() {
               {t('title')}
             </span>
             <br />
-            <span className="text-white drop-shadow-lg">{t('subtitle')}</span>
+            <span className="text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">{t('subtitle')}</span>
           </h1>
-          <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-200 drop-shadow-md px-4">
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-gray-50 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] px-4 font-medium">
             {t('description')}
           </p>
           <div className="mt-8 sm:mt-10 flex items-center justify-center gap-x-4 sm:gap-x-6">
@@ -65,11 +65,11 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
-              className="glass rounded-lg p-4 sm:p-6 text-center backdrop-blur-md bg-black/40 border border-white/10"
+              className="glass rounded-lg p-4 sm:p-6 text-center backdrop-blur-md bg-black/50 border border-white/20 shadow-xl"
             >
-              <stat.icon className="mx-auto h-6 w-6 sm:h-8 sm:w-8 text-primary" />
-              <p className="mt-3 sm:mt-4 text-2xl sm:text-3xl font-bold text-white">{stat.value}</p>
-              <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-300">{stat.label}</p>
+              <stat.icon className="mx-auto h-6 w-6 sm:h-8 sm:w-8 text-primary drop-shadow-lg" />
+              <p className="mt-3 sm:mt-4 text-2xl sm:text-3xl font-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">{stat.value}</p>
+              <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-100 drop-shadow-md font-medium">{stat.label}</p>
             </motion.div>
           ))}
         </motion.div>
