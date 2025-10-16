@@ -27,25 +27,31 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    /* Background plus clair pour meilleure lisibilité */
+    --background: 222.2 47% 11%;
     --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
+    /* Cards avec meilleur contraste */
+    --card: 222.2 47% 15%;
     --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
+    --popover: 222.2 47% 15%;
     --popover-foreground: 210 40% 98%;
-    --primary: 263 70% 50%;
+    /* Primary plus lumineux */
+    --primary: 263 70% 60%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 217.2 32.6% 17.5%;
+    /* Secondary avec meilleur contraste */
+    --secondary: 217.2 32.6% 25%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
+    /* Muted plus visible */
+    --muted: 217.2 32.6% 25%;
+    --muted-foreground: 215 20.2% 75%;
+    --accent: 217.2 32.6% 25%;
     --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 62.8% 50%;
     --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 263 70% 50%;
+    /* Borders plus visibles */
+    --border: 217.2 32.6% 25%;
+    --input: 217.2 32.6% 25%;
+    --ring: 263 70% 60%;
   }
 }
 
@@ -67,6 +73,14 @@
   @media screen and (max-width: 640px) {
     input, select, textarea {
       font-size: 16px !important;
+    }
+  }
+  
+  /* Amélioration de la lisibilité en mode dark sur mobile */
+  @media (prefers-color-scheme: dark) and (max-width: 768px) {
+    .dark {
+      /* Augmenter légèrement la luminosité du background sur mobile */
+      --background: 222.2 47% 13%;
     }
   }
 }
