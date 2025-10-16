@@ -2,14 +2,15 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const previewGames = [
-  { id: 'aviator', name: 'Aviator', category: 'Crash', gradient: 'from-orange-500 to-red-500' },
-  { id: 'slots', name: 'Slots Galaxy', category: 'Slots', gradient: 'from-purple-500 to-pink-500' },
-  { id: 'dice', name: 'Lucky Dice', category: 'Dice', gradient: 'from-blue-500 to-cyan-500' },
+  { id: 'aviator', name: 'Aviator', category: 'Crash', image: '/images/hero/aviator.jpg' },
+  { id: 'slots', name: 'Slots Galaxy', category: 'Slots', image: '/images/hero/835.jpg' },
+  { id: 'dice', name: 'Lucky Dice', category: 'Dice', image: '/images/hero/dice.jpg' },
 ];
 
 export function GamesPreview() {
@@ -26,7 +27,15 @@ export function GamesPreview() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-12">
           {previewGames.map((game) => (
             <Card key={game.id} className="group overflow-hidden transition-all hover:shadow-xl">
-              <div className={`h-32 bg-gradient-to-br ${game.gradient}`} />
+              <div className="relative h-48 w-full overflow-hidden">
+                <Image
+                  src={game.image}
+                  alt={game.name}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
               <CardHeader>
                 <CardTitle>{game.name}</CardTitle>
                 <CardDescription>{game.category}</CardDescription>
